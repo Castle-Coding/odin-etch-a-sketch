@@ -26,7 +26,7 @@ body {
 .content {
     border: solid green;
     /* --- For debugging --- */
-    flex: 1 1;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     flex-flow: wrap-reverse;
@@ -34,11 +34,8 @@ body {
 
 .sidebar {
     border: solid purple;
-    align-self: center;
     display: flex;
     flex-direction: column;
-    flex-shrink: 1;
-    flex-grow: 0;
 }
 
 .switch-group {
@@ -53,16 +50,16 @@ body {
 
 .main-window {
     border: solid orange;
-    min-width: 200px;
     flex-grow: 1;
     display: flex;
 }
 
 .etch-a-sketch-window {
     border: solid slateblue;
-    max-height: 700px;
-    max-width: 700px;
-    min-height: 341px;
+    max-height: 500px;
+    max-width: 500px;
+    min-height: 300px;
+    min-width: 300px;
     display: flex;
     flex-grow: 1;
 }
