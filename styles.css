@@ -16,8 +16,12 @@ body {
 .header {
     border: solid red;
     /* --- For debugging --- */
-    flex: 0 1;
     font-size: 55px;
+    padding: 0 20%;
+}
+
+p {
+    margin: 0;
 }
 
 /* --- Header End --- */
@@ -25,17 +29,17 @@ body {
 
 .content {
     border: solid green;
-    /* --- For debugging --- */
     flex-grow: 1;
     display: flex;
-    justify-content: center;
     flex-flow: wrap-reverse;
+    justify-content: center;
+    padding: 0 20%;
+    align-items: center;
 }
 
 .sidebar {
     border: solid purple;
-    display: flex;
-    flex-direction: column;
+    flex-grow: 4;
 }
 
 .switch-group {
@@ -52,16 +56,39 @@ body {
     border: solid orange;
     flex-grow: 1;
     display: flex;
+    flex-shrink: 0;
+    align-self: center;
+    justify-content: center;
 }
 
 .etch-a-sketch-window {
     border: solid slateblue;
     max-height: 500px;
     max-width: 500px;
-    min-height: 300px;
-    min-width: 300px;
+    min-height: 500px;
+    min-width: 500px;
     display: flex;
     flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.etch-a-sketch-window {
+    border: solid slateblue;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 910px) {
+    .etch-a-sketch-window {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
 }
 
 .etch-a-sketch {
@@ -76,7 +103,9 @@ body {
     border: solid blue;
     /* --- For debugging --- */
     flex: 0 1;
+    padding: 10px;
 }
 
 /* --- Footer End --- */
 /* --- Body End --- */
+
