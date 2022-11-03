@@ -1,0 +1,71 @@
+html {
+    height: 100%;
+}
+
+/* --- Body Start --- */
+
+body {
+    min-height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header Start --- */
+
+.header {
+    border: solid red;
+    /* --- For debugging --- */
+    flex: 0 1;
+    font-size: 55px;
+}
+
+/* --- Header End --- */
+/* --- Content Start --- */
+
+.content {
+    border: solid green;
+    /* --- For debugging --- */
+    flex: 1 1;
+    display: flex;
+    align-self: center;
+}
+
+.sidebar {
+    border: solid purple;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.switch-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-window {
+    border: solid orange;
+}
+
+.etch-a-sketch {
+    border: solid slateblue;
+    height: 700px;
+    width: 700px;
+}
+
+/* --- Content End --- */
+/* --- Footer Start --- */
+
+.footer {
+    border: solid blue;
+    /* --- For debugging --- */
+    flex: 0 1;
+}
+
+/* --- Footer End --- */
+/* --- Body End --- */
