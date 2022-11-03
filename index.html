@@ -14,26 +14,38 @@
     <div class="content">
         <div class="sidebar">
             <div class="switch-group">
-                <label class="switch">
-                    Black & White<input type="checkbox"><span class="slider">Randomize Color</span>
-                </label>
-
-                <label class="switch">
-                    Solid<input type="checkbox"><span class="slider">Progressive</span>
-                </label>
+                <div class="switch-div">
+                    <div><span id="switch-label-1">Black & White</span></div>
+                    <div>
+                        <label class="switch" id="top-switch">
+                            <input type="checkbox"><span class="slider"></span>
+                        </label>
+                    </div>
+                    <div><span id="switch-label-2">Randomize Color</span></div>
+                </div>
+                <div class="switch-div">
+                    <div><span id="switch-label-3">Solid</span></div>
+                    <div>
+                        <label class="switch" id="bottom-switch">
+                            <input type="checkbox"><span class="slider"></span>
+                        </label>
+                    </div>
+                    <div><span id="switch-label-4">Progressive</span></div>
+                </div>
             </div>
             <div class="button-group">
                 <button>Black & White</button>
-                <button>Randomize Color</button>
+                <button>Grid Size </button>
                 <button>Clear</button>
             </div>
         </div>
-        <div class="main-window">
-            <div class="header"><span>Etch-A-Sketch</span> <button>Grid Size</button></div>
-            <div class="etch-a-sketch-window">
-                <div class="etch-a-sketch"></div>
-            </div>
+    <div class="main-window">
+        <div class="header"><span>Etch-A-Sketch</span></div>
+        <div class="etch-a-sketch-window">
+            <div class="etch-a-sketch"></div>
         </div>
+    </div>
+</div>
     </div>
     <div class="footer">
         Copyright ©

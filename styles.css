@@ -9,26 +9,13 @@ body {
     display: flex;
     flex-direction: column;
     font-family: monospace;
+    background-color: rgb(192, 183, 183);
+    color: #3a3a3a;
 }
 
-/* --- Header Start --- */
-
-.header {
-    border: solid red;
-    /* --- For debugging --- */
-    font-size: 50px;
-    font-weight: bold;
-}
-
-p {
-    margin: 0;
-}
-
-/* --- Header End --- */
 /* --- Content Start --- */
 
 .content {
-    border: solid green;
     flex-grow: 1;
     display: flex;
     flex-flow: wrap-reverse;
@@ -37,38 +24,59 @@ p {
 }
 
 .sidebar {
-    border: solid purple;
     flex-grow: 1;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding-top: 120px;
+    gap: 30px;
 }
 
 .switch-group {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    font-size: 15px
 }
 
 .button-group {
     display: flex;
     flex-direction: column;
     align-self: center;
+    gap: 30px
+}
+
+.button-group button {
+    border: solid #3a3a3a;
+    color: #3a3a3a;
+    background-color: rgb(192, 183, 183);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 12px;
 }
 
 .main-window {
-    border: solid orange;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    padding-right: 300px;
+    padding-right: 200px;
+
+}
+
+.header {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
 .etch-a-sketch-window {
-    border: solid slateblue;
     height: 500px;
     width: 500px;
     display: flex;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
@@ -77,6 +85,7 @@ p {
     .header {
         text-align: center;
     }
+
     .etch-a-sketch-window {
         height: 500px;
         width: 500px;
@@ -99,6 +108,7 @@ p {
         display: flex;
         align-self: center;
     }
+
     .sidebar {
         padding-top: 0px;
     }
@@ -108,14 +118,11 @@ p {
     }
 
     .header {
-        border: solid red;
-        /* --- For debugging --- */
         font-size: 35px;
     }
 }
 
 .etch-a-sketch {
-    border: solid tomato;
     flex-grow: 1;
 }
 
@@ -123,13 +130,73 @@ p {
 /* --- Footer Start --- */
 
 .footer {
-    border: solid blue;
-    /* --- For debugging --- */
     flex: 0 1;
     padding: 10px;
     text-align: center;
+    background-color: black;
+    color: white;
 }
 
 /* --- Footer End --- */
 /* --- Body End --- */
 
+
+/* --- Slider code --- */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #3a3a3a;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #3a3a3a;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+.switch-div {
+    display: flex;
+}
