@@ -103,6 +103,7 @@ p {
     /* --- For debugging --- */
     flex: 0 1;
     padding: 10px;
+    text-align: center;
 }
 
 /* --- Footer End --- */
