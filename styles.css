@@ -8,6 +8,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    font-family: monospace;
 }
 
 /* --- Header Start --- */
@@ -16,6 +17,7 @@ body {
     border: solid red;
     /* --- For debugging --- */
     font-size: 50px;
+    font-weight: bold;
 }
 
 p {
@@ -39,6 +41,7 @@ p {
     flex-grow: 1;
     display:flex;
     flex-direction: column;
+    padding-top: 120px;
 }
 
 .switch-group {
@@ -58,6 +61,7 @@ p {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding-right: 300px;
 }
 
 .etch-a-sketch-window {
@@ -81,12 +85,32 @@ p {
     }
 }
 
+@media only screen and (max-width: 1790px) {
+
+    .main-window {
+        padding-right: 0px;
+    }
+}
+
 @media only screen and (max-width: 710px) {
     .etch-a-sketch-window {
         height: 300px;
         width: 300px;
         display: flex;
         align-self: center;
+    }
+    .sidebar {
+        padding-top: 0px;
+    }
+
+    .main-window {
+        padding-right: 0px;
+    }
+
+    .header {
+        border: solid red;
+        /* --- For debugging --- */
+        font-size: 35px;
     }
 }
 
