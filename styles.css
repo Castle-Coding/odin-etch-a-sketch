@@ -28,7 +28,8 @@ body {
     /* --- For debugging --- */
     flex: 1 1;
     display: flex;
-    align-self: center;
+    justify-content: center;
+    flex-flow: wrap-reverse;
 }
 
 .sidebar {
@@ -36,6 +37,8 @@ body {
     align-self: center;
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    flex-grow: 0;
 }
 
 .switch-group {
@@ -50,12 +53,23 @@ body {
 
 .main-window {
     border: solid orange;
+    min-width: 200px;
+    flex-grow: 1;
+    display: flex;
+}
+
+.etch-a-sketch-window {
+    border: solid slateblue;
+    max-height: 700px;
+    max-width: 700px;
+    min-height: 341px;
+    display: flex;
+    flex-grow: 1;
 }
 
 .etch-a-sketch {
-    border: solid slateblue;
-    height: 700px;
-    width: 700px;
+    border: solid tomato;
+    flex-grow: 1;
 }
 
 /* --- Content End --- */
