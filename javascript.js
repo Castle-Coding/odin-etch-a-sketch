@@ -1,4 +1,4 @@
-function generateGrid (gridSize = 16) {
+function generateGrid(gridSize = 16) {
     const targetWindow = document.getElementById("etch-a-sketch-background");
     clearGrid();
     let columns = gridSize;
@@ -14,13 +14,25 @@ function generateGrid (gridSize = 16) {
             column.appendChild(row); // append row in column
         }
         grid.appendChild(column); // append column inside grid
-        
-        
     }
     targetWindow.appendChild(grid);
+    initGrid();
 }
 
 function clearGrid() {
     const targetWindow = document.getElementById("etch-a-sketch-background");
     targetWindow.innerHTML = '';
+}
+
+function initGrid() {
+    const gridCell = document.querySelectorAll('.gridsquare');
+    gridCell.forEach(grid => grid.addEventListener('mouseover', colorGrid));
+}
+
+function colorGrid() {
+    this.style.backgroundColor = "Black";
+}
+
+function selectColor() {
+    return
 }
