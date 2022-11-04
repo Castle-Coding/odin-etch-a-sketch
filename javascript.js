@@ -56,3 +56,16 @@ function randomProgressiveColor() {
 
     return `rgb(${red}, ${green}, ${blue})`;
 }
+
+function initClearButton() {
+    const clearButton = document.getElementById('clear-button');
+    clearButton.addEventListener('click', eraseGrid);
+}
+
+function eraseGrid() {
+    const gridCell = document.querySelectorAll('.gridsquare');
+    gridCell.forEach (grid => grid.style.backgroundColor = "")
+}
+
+initClearButton();
+generateGrid();
