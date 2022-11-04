@@ -37,12 +37,9 @@ function selectColor() {
     const colorSelection = document.getElementById("color-check");
     let color = "Black"
     if (colorSelection.checked) {
-
         color = getRandomColor();
-        console.log(color);
     } else {
         color = "Black"
-        console.log(color);
     }
     return color;
 }
