@@ -30,9 +30,28 @@ function initGrid() {
 }
 
 function colorGrid() {
-    this.style.backgroundColor = "Black";
+    this.style.backgroundColor = selectColor();
 }
 
 function selectColor() {
-    return
+    const colorSelection = document.getElementById("color-check");
+    let color = "Black"
+    if (colorSelection.checked) {
+
+        color = getRandomColor();
+        console.log(color);
+    } else {
+        color = "Black"
+        console.log(color);
+    }
+    return color;
 }
+
+function getRandomColor() {
+    return `rgb(${Math.round(Math.random() * (255 - 0) + 0)}, ${Math.round(Math.random() * (255 - 0) + 0)}, ${Math.round(Math.random() * (255 - 0) + 0)})`;
+    
+}
+
+let checkbox2 = document.getElementById("line-strength-check");
+
+generateGrid();
