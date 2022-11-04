@@ -249,7 +249,7 @@ input:checked+.slider:before {
 }
 
 .gridsquare {
-    border: solid #3a3a3a;
+    border: solid #bbbbbb;
     border-width: thin;
 }
 

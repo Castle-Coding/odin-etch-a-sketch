@@ -71,6 +71,7 @@ function initGridButton() {
     const gridButton = document.getElementById('grid-size-button');
     const gridCloseButton = document.getElementsByClassName("close")[0];
 
+
     gridButton.addEventListener('click', openModal);
     gridCloseButton.addEventListener('click', closeModal);
 }
@@ -91,17 +92,37 @@ function closeModalOnWindowClick() {
 function openModal() {
     const modal = document.getElementById('grid-size-modal');
     const gridButton = document.getElementById('grid-size-button');
-    const confirmButton = document.getElementById('grid-size-button');
+    const confirmButton = document.getElementById('confirmButton');
 
+    confirmButton.addEventListener('click', submitGridSize)
     modal.style.display = "block";
     gridButton.classList.add("activeButton");
     closeModalOnWindowClick();
     
 }
 
+function submitGridSize(value = 16) {
+
+    const modal = document.getElementById('grid-size-modal');
+    value = parseInt(document.getElementById('gValue').value);
+    
+    
+    if (value < 2 || value > 100 || isNaN(value)) {
+        console.log("Invalid");
+        return 
+
+    } else {
+        value = document.getElementById('gValue').value;
+        generateGrid(value)
+        closeModal();
+        return
+    }
+}
+
 function closeModal() {
     const modal = document.getElementById('grid-size-modal');
     const gridButton = document.getElementById('grid-size-button');
+    const confirmButton = document.getElementById('confirmButton');
 
     modal.style.display = "none";
     gridButton.classList.remove("activeButton");
