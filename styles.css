@@ -148,7 +148,6 @@ input:checked+.slider:before {
     height: 500px;
     width: 500px;
     display: flex;
-    background: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -194,8 +193,35 @@ input:checked+.slider:before {
     }
 }
 
-.etch-a-sketch {
+#etch-a-sketch-background {
     flex-grow: 1;
+    background: white;
+    display: flex;
+
+}
+
+.grid {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.column {
+    flex-grow: 1;
+    display:flex;
+    flex-direction: column;
+}
+
+.row {
+    background: white;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.gridsquare {
+    border: solid #3a3a3a;
+    border-width: thin;
 }
 
 /* --- Main Window End --- */
