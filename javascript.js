@@ -35,20 +35,24 @@ function colorGrid() {
 
 function selectColor() {
     const colorSelection = document.getElementById("color-check");
-    let color = "Black"
+    let color;
     if (colorSelection.checked) {
         color = getRandomColor();
+        return color;
     } else {
-        color = "Black"
+        color = "rgb(1, 1, 1)"
+        return color;
     }
-    return color;
 }
 
 function getRandomColor() {
     return `rgb(${Math.round(Math.random() * (255 - 0) + 0)}, ${Math.round(Math.random() * (255 - 0) + 0)}, ${Math.round(Math.random() * (255 - 0) + 0)})`;
-    
 }
 
-let checkbox2 = document.getElementById("line-strength-check");
+function randomProgressiveColor() {
+    let red = Math.round((Math.random() * (255 - 0) + 0) / 10)
+    let green = Math.round((Math.random() * (255 - 0) + 0) / 10)
+    let blue = Math.round((Math.random() * (255 - 0) + 0) / 10);
 
-generateGrid();
+    return `rgb(${red}, ${green}, ${blue})`;
+}
