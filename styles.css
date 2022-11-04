@@ -132,7 +132,10 @@ input:checked+.slider:before {
     box-shadow: 0 9px #999;
   }
   
-  .button:hover {background-color: #3a3a3a}
+  .button:hover {
+    background-color: #3a3a3a;
+    color:#ccc;
+}
   
   .button:active {
     background-color: #3a3a3a;
@@ -140,6 +143,11 @@ input:checked+.slider:before {
     transform: translateY(4px);
     color:#ccc;
   }
+
+.activeButton#grid-size-button {
+    background-color: #3a3a3a;
+    color:#ccc;
+}
 
 /* --- Sidebar End --- */
 /* --- Main Window Start --- */
@@ -282,7 +290,8 @@ input:checked+.slider:before {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 20%; /* Could be more or less, depending on screen size */
+    text-align: center;
   }
   
   /* The Close Button */
@@ -299,3 +308,5 @@ input:checked+.slider:before {
     text-decoration: none;
     cursor: pointer;
   }
+
+  

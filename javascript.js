@@ -73,31 +73,40 @@ function initGridButton() {
 
     gridButton.addEventListener('click', openModal);
     gridCloseButton.addEventListener('click', closeModal);
-    console.log(gridButton);
 }
 
 function closeModalOnWindowClick() {
     const modal = document.getElementById('grid-size-modal');
     const modalDisplayStatus = modal.style.display;
+    const gridButton = document.getElementById('grid-size-button');
 
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            gridButton.classList.remove("activeButton");
         }
     }
 }
 
 function openModal() {
     const modal = document.getElementById('grid-size-modal');
+    const gridButton = document.getElementById('grid-size-button');
+
     modal.style.display = "block";
+    gridButton.classList.add("activeButton");
     closeModalOnWindowClick();
     
 }
 
 function closeModal() {
     const modal = document.getElementById('grid-size-modal');
+    const gridButton = document.getElementById('grid-size-button');
+    
     modal.style.display = "none";
+    gridButton.classList.remove("activeButton");
 }
+
+let gridValue = 16;
 
 initGridButton();
 initClearButton();
