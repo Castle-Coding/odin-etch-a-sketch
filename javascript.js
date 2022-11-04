@@ -91,6 +91,7 @@ function closeModalOnWindowClick() {
 function openModal() {
     const modal = document.getElementById('grid-size-modal');
     const gridButton = document.getElementById('grid-size-button');
+    const confirmButton = document.getElementById('grid-size-button');
 
     modal.style.display = "block";
     gridButton.classList.add("activeButton");
@@ -101,7 +102,7 @@ function openModal() {
 function closeModal() {
     const modal = document.getElementById('grid-size-modal');
     const gridButton = document.getElementById('grid-size-button');
-    
+
     modal.style.display = "none";
     gridButton.classList.remove("activeButton");
 }

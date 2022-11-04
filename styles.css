@@ -129,24 +129,23 @@ input:checked+.slider:before {
 
 .button {
     padding: 15px 25px;
-    box-shadow: 0 9px #999;
-  }
-  
-  .button:hover {
-    background-color: #3a3a3a;
-    color:#ccc;
 }
-  
-  .button:active {
+
+.button:hover {
     background-color: #3a3a3a;
-    box-shadow: 0 5px #666;
+    color: #ccc;
+}
+
+.button:active {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px #666;
     transform: translateY(4px);
-    color:#ccc;
-  }
+    color: #ccc;
+}
 
 .activeButton#grid-size-button {
     background-color: #3a3a3a;
-    color:#ccc;
+    color: #ccc;
 }
 
 /* --- Sidebar End --- */
@@ -239,7 +238,7 @@ input:checked+.slider:before {
 
 .column {
     flex-grow: 1;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -272,41 +271,73 @@ input:checked+.slider:before {
 
 /* Modal */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 20%; /* Could be more or less, depending on screen size */
+    width: 20%;
+    /* Could be more or less, depending on screen size */
     text-align: center;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  
+#confirmButton {
+    color: #ccc;
+    background-color: #3a3a3a;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: solid #3a3a3a;
+    border-radius: 8px;
+    padding: 0px 10px;
+}
+
+#confirmButton:hover {
+    transform:scale(1.2);
+}
+
+#confirmButton:active {
+    background-color: #ccc;
+    box-shadow: 0 2px #666;
+    border: solid #ccc;
+    transform: translateY(4px);
+    transform:scale(1.2);
+    color: #3a3a3a;
+}
