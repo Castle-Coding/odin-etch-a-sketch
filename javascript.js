@@ -64,8 +64,41 @@ function initClearButton() {
 
 function eraseGrid() {
     const gridCell = document.querySelectorAll('.gridsquare');
-    gridCell.forEach (grid => grid.style.backgroundColor = "")
+    gridCell.forEach(grid => grid.style.backgroundColor = "")
 }
 
+function initGridButton() {
+    const gridButton = document.getElementById('grid-size-button');
+    const gridCloseButton = document.getElementsByClassName("close")[0];
+
+    gridButton.addEventListener('click', openModal);
+    gridCloseButton.addEventListener('click', closeModal);
+    console.log(gridButton);
+}
+
+function closeModalOnWindowClick() {
+    const modal = document.getElementById('grid-size-modal');
+    const modalDisplayStatus = modal.style.display;
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+function openModal() {
+    const modal = document.getElementById('grid-size-modal');
+    modal.style.display = "block";
+    closeModalOnWindowClick();
+    
+}
+
+function closeModal() {
+    const modal = document.getElementById('grid-size-modal');
+    modal.style.display = "none";
+}
+
+initGridButton();
 initClearButton();
 generateGrid();
