@@ -24,6 +24,9 @@ body {
     padding: 0 15%;
 }
 
+/* --- Sidebar Start --- */
+/* --- Sidebar Switches Start --- */
+
 .sidebar {
     flex-grow: 1;
     display: flex;
@@ -40,110 +43,6 @@ body {
     font-size: 15px;
     margin-left: 30px;
 }
-
-.button-group {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    gap: 30px
-}
-
-.button-group button {
-    border: solid #3a3a3a;
-    color: #3a3a3a;
-    background-color: rgb(192, 183, 183);
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 10px 40px;
-    border-radius: 12px;
-}
-
-.main-window {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding-right: 200px;
-
-}
-
-.header {
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 40px;
-}
-
-.etch-a-sketch-window {
-    height: 500px;
-    width: 500px;
-    display: flex;
-    background: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-
-@media only screen and (max-width: 1288px) {
-
-    .header {
-        text-align: center;
-    }
-
-    .etch-a-sketch-window {
-        height: 500px;
-        width: 500px;
-        display: flex;
-        align-self: center;
-    }
-}
-
-@media only screen and (max-width: 1790px) {
-
-    .main-window {
-        padding-right: 0px;
-    }
-}
-
-@media only screen and (max-width: 710px) {
-    .etch-a-sketch-window {
-        height: 300px;
-        width: 300px;
-        display: flex;
-        align-self: center;
-    }
-
-    .sidebar {
-        padding-top: 0px;
-    }
-
-    .main-window {
-        padding-right: 0px;
-    }
-
-    .header {
-        font-size: 35px;
-    }
-}
-
-.etch-a-sketch {
-    flex-grow: 1;
-}
-
-/* --- Content End --- */
-/* --- Footer Start --- */
-
-.footer {
-    flex: 0 1;
-    padding: 10px;
-    text-align: center;
-    background-color: #3a3a3a;
-    color: white;
-}
-
-/* --- Footer End --- */
-/* --- Body End --- */
-
-
-/* --- Slider code --- */
 
 .switch {
     position: relative;
@@ -207,3 +106,109 @@ input:checked+.slider:before {
 #bottom-switch {
     margin-left: 18px;
 }
+
+/* --- Sidebar Buttons Start --- */
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 30px
+}
+
+.button-group button {
+    border: solid #3a3a3a;
+    color: #3a3a3a;
+    background-color: rgb(192, 183, 183);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 40px;
+    border-radius: 12px;
+}
+
+/* --- Sidebar End --- */
+/* --- Main Window Start --- */
+
+.main-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 200px;
+
+}
+
+.header {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.etch-a-sketch-window {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media only screen and (max-width: 1288px) {
+
+    .header {
+        text-align: center;
+    }
+
+    .etch-a-sketch-window {
+        height: 500px;
+        width: 500px;
+        display: flex;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 1790px) {
+
+    .main-window {
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    .etch-a-sketch-window {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        align-self: center;
+    }
+
+    .sidebar {
+        padding-top: 0px;
+    }
+
+    .main-window {
+        padding-right: 0px;
+    }
+
+    .header {
+        font-size: 35px;
+    }
+}
+
+.etch-a-sketch {
+    flex-grow: 1;
+}
+
+/* --- Main Window End --- */
+/* --- Content End --- */
+/* --- Footer Start --- */
+
+.footer {
+    flex: 0 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+/* --- Footer End --- */
+/* --- Body End --- */
